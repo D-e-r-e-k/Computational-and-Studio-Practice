@@ -1,0 +1,12 @@
+# Initial Ideas
+Five possible areas that I'm interested in.
+## Brushes
+Ever since [Craig_Mullins](http://www.goodbrush.com/x4oynmjkxr5fhgmi0xsh6a9ml2dhxl) started to paint in Photoshop, digital artists have been learning about brushes. It's fascinating how a basic tool like [brush](https://helpx.adobe.com/photoshop/using/brush-presets.html) can be exploited to such an extent. (Some of my favorite digital artists: [Yizheng_Ke](https://www.instagram.com/yizhengke1988/), [John_Park](https://www.instagram.com/jparkedart/), [Huaishen](https://www.instagram.com/huaishen89/)) Deconstruction of the creation process of a digital art pice itself can be an art pice.
+## Cars?
+I love to watch race cars, and generally cars in consequence. Racing games, racing simulators, dedicated websites and content creators have covered most aspects of the field I can think of now. Maybe I can try to explore the essence of my love for race cars and use it as the theme for a retro game.
+## Craftsmanship in Digital Design
+Inspired after [Underline.js](https://underlinejs.wentin.net/), I'm very interested in choosing one detail form digital design and create a piece to emphasize that even the tiniest detail matters. Some new discipline of design including interaction design do not want to acknowledge many of the academic foundations. It's a good opportunity to start from bottom to top and meditate on what are the new basics.
+## Depth of Interfaces
+The metaphor of depth has been an essential concept in almost all recent screen based interface designs. Both [Apple](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/) and [Google](https://material.io/design/environment/elevation.html#light) described their vision on the illusion of space within interface design. Depiction of space on a surface seems to be a recurring theme through out the art history. We understand the space in a painting very well, but what's the space like behind the surface of a screen since we have only see its frontal view.
+## History that Shaped Computer
+Many aspects of current computer systems design are shaped though the history. "Qwerty" keyboard layout is one of the most famous. I have done about a project on affordance of keyboard shortcut and discovered the heritage behind keys is worth digging up. [Wikipedia](https://en.wikipedia.org/wiki/Category:Computer_keys) is a good starting point as always. This concept could also be expanded to other areas of the design of a computer system.
