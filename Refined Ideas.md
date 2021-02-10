@@ -27,5 +27,5 @@ I need to get very familiar with the mechanism of how web pages are rendered and
 - [FR Legends](https://apps.apple.com/us/app/fr-legends/id1435740083) : An indie drifting/stunt driving game developed by Twin Turbo Tech Co. It captured pretty well the essence of drifting and it's rated very high on all app stores.
 ### Contribution
 It's hard to say what contribution a game like this has beside people having fun enjoying it.
-###
+### Challenge
 It's been done so many times. What's something novel but fun at the same time I can come up with?
