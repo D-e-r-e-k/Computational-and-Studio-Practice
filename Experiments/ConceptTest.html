@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ConceptTest</title>
+    <!-- <base href="http://www.http2demo.io/"> -->
+
+  </head>
+  <body>
+    <h1>Concept Test</h1>
+    <canvas id="cnv" width="800" height="400"></canvas>
+
+    <script type="module">
+
+      import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r125/build/three.module.js';
+
+      function main() {
+
+        console.log("main() running");
+
+        const canvas = document.getElementById("cnv");
+        // const canvas = document.querySelector('#cnv');
+        const renderer = new THREE.WebGLRenderer({canvas});
+
+        const fov = 75;
+        const aspect = 2;  // the canvas default
+        const near = 0.1;
+        const far = 5;
+        const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+
+        camera.position.z = 2;
+
+        const scene = new THREE.Scene();
+
+        const boxWidth = 1;
+        const boxHeight = 1;
+        const boxDepth = 1;
+        const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+
+        const material = new THREE.MeshBasicMaterial({color: 0x44aa88});
+
+        const cube = new THREE.Mesh(geometry, material);
+
+        scene.add(cube);
+
+        renderer.render(scene, camera);
+
+        function render(time) {
+          time *= 0.001;  // convert time to seconds
+ 
+          cube.rotation.x = time;
+          cube.rotation.y = time;
+ 
+         renderer.render(scene, camera);
+ 
+         requestAnimationFrame(render);
+        }
+        requestAnimationFrame(render);
+
+      }
+
+      main();
+
+
+
+      // --- load from url test ---
+
+      // let test = document.createElement("h1");
+      // let testInner = document.createTextNode("Append Test")
+      // document.body.appendChild(test);
+      // test.appendChild(testInner);
+      
+
+      let container = document.createElement("div");
+      container.style.border = "thick solid #0000FF";
+      document.body.appendChild(container);
+
+      let shadow = container.attachShadow({mode:"open"});
+      let content = document.createElement("html");
+      shadow.append(content);
+
+      function reqListener () {
+        //console.log(this.response);
+        //console.log(this.responseText);
+        content.innerHTML = this.response;
+        
+
+        let base = document.createElement('base');
+        base.href = 'http://www.http2demo.io/';
+        content.firstChild.appendChild(base);
+        //console.log(content.firstChild);
+
+        //console.log(content.children);
+      }
+
+      let base = document.createElement('base');
+      base.href = 'http://www.http2demo.io/';
+      document.head.appendChild(base);
+
+      let oReq = new XMLHttpRequest();
+      oReq.addEventListener("load", reqListener);
+      oReq.open("GET", "http://www.http2demo.io/");
+      oReq.send();
+
+    </script>
+  </body>
+</html>
