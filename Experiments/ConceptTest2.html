@@ -3,19 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <title>ConceptTest</title>
-    <base href="http://www.http2demo.io/">
+    <!-- <base href="http://www.http2demo.io/"> -->
 
   </head>
   <body>
-    <h1 id="title">Concept Test</h1>
+    <h1 id="title">Concept Test 2</h1>
     <h2>Three.js Test</h2>
     <canvas id="cnv" width="800" height="400"></canvas>
     <h2>Load Website Test</h2>
 
+    <script src="bundle.js"></script>
     <script type="module">
 
       import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r125/build/three.module.js';
       // import * as htmlToImage from '../node_modules/html-to-image';
+
+      var scene;
+      var cube;
+      var renderer;
+      var camera;
+      var geometry;
 
       function main() {
 
@@ -23,37 +30,39 @@
 
         const canvas = document.getElementById("cnv");
         // const canvas = document.querySelector('#cnv');
-        const renderer = new THREE.WebGLRenderer({canvas});
+        renderer = new THREE.WebGLRenderer({canvas});
 
         const fov = 75;
         const aspect = 2;  // the canvas default
         const near = 0.1;
-        const far = 5;
-        const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+        const far = 50;
+        camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 
-        camera.position.z = 2;
+        camera.position.z = 20;
 
-        const scene = new THREE.Scene();
+        scene = new THREE.Scene();
 
         const boxWidth = 1;
         const boxHeight = 1;
         const boxDepth = 1;
-        const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+        geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
 
         const material = new THREE.MeshBasicMaterial({color: 0x44aa88});
 
-        const cube = new THREE.Mesh(geometry, material);
+        //cube = new THREE.Mesh(geometry, material);
 
-        scene.add(cube);
+        //scene.add(cube);
 
         renderer.render(scene, camera);
 
         function render(time) {
           time *= 0.001;  // convert time to seconds
  
-          cube.rotation.x = time;
-          cube.rotation.y = time;
- 
+          if(cube){
+            cube.rotation.x = time;
+            cube.rotation.y = time;
+          }
+
          renderer.render(scene, camera);
  
          requestAnimationFrame(render);
@@ -93,6 +102,7 @@
         //console.log(content.firstChild);
 
         //console.log(content.children);
+        toImgTest();
       }
 
       let base = document.createElement('base');
@@ -108,14 +118,33 @@
       // --- html-to-image test ---
       // import * as htmlToImage from '../node_modules/html-to-image';
       //console.log("loaded to img");
+      function toImgTest() {
+        let list = content.getElementsByTagName("h1");
+        console.log(list[0]);
 
-      // htmlToImage.toSvg(document.getElementById('title'))
-      // .then(function (dataUrl) {
-      //   /* do something */
-      //   let webSvg = new Image();
-      //   img.src = dataUrl;
-      //   document.body.appendChild(img);
-      // });
+
+        toImg.toPng(document.getElementById("title"))
+        .then(function (dataUrl) {
+          /* do something */
+          
+          let img = new Image();
+          img.src = dataUrl;
+          document.body.appendChild(img);
+          console.log("appended");
+
+          //window.open(dataUrl);
+          var map = new THREE.TextureLoader().load("testImg.png");
+          var material = new THREE.SpriteMaterial( { map: map, color: 0xffffff } );
+          var sprite = new THREE.Sprite( material );
+          sprite.scale.set(128,128,1);
+          scene.add( sprite );
+          cube = new THREE.Mesh(geometry, material);
+          scene.add( cube );
+          renderer.render(scene, camera);
+          console.log(scene);
+          console.log("added");
+        });
+      }
 
     </script>
   </body>

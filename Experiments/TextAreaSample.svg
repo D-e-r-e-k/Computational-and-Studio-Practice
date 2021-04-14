@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="724" height="870"><foreignObject width="100%" height="100%" x="0" y="0" externalResourcesRequired="true"><textarea xmlns="http://www.w3.org/1999/xhtml" id="code-textarea" style="place-content: normal; place-items: normal; place-self: auto; alignment-baseline: auto; animation: 0s ease 0s 1 normal none running none; appearance: auto; backdrop-filter: none; backface-visibility: visible; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255); background-blend-mode: normal; baseline-shift: 0px; block-size: 250px; border-block-end: 1px solid rgb(187, 187, 187); border-block-start: 1px solid rgb(187, 187, 187); border-color: rgb(187, 187, 187); border-radius: 0px; border-style: solid; border-width: 1px; border-collapse: separate; border-end-end-radius: 0px; border-end-start-radius: 0px; border-image: none 100% / 1 / 0 stretch; border-inline-end: 1px solid rgb(187, 187, 187); border-inline-start: 1px solid rgb(187, 187, 187); border-start-end-radius: 0px; border-start-start-radius: 0px; inset: auto; box-shadow: none; box-sizing: content-box; break-after: auto; break-before: auto; break-inside: auto; buffered-rendering: auto; caption-side: top; caret-color: rgb(0, 0, 0); clear: none; clip: auto; clip-path: none; clip-rule: nonzero; color: rgb(0, 0, 0); color-interpolation: srgb; color-interpolation-filters: linearrgb; color-rendering: auto; columns: auto auto; gap: normal; column-rule: 0px none rgb(0, 0, 0); column-span: none; content: normal; cursor: text; cx: 0px; cy: 0px; d: none; direction: ltr; display: inline-block; dominant-baseline: auto; empty-cells: show; fill: rgb(0, 0, 0); fill-opacity: 1; fill-rule: nonzero; filter: none; flex: 0 1 auto; flex-flow: column nowrap; float: none; flood-color: rgb(0, 0, 0); flood-opacity: 1; font: 400 14px / 20px monospace; font-kerning: auto; font-optical-sizing: auto; grid-auto-columns: auto; grid-auto-flow: row; grid-auto-rows: auto; grid-area: auto / auto / auto / auto; grid-template-areas: none; grid-template-columns: none; grid-template-rows: none; height: 250px; hyphens: manual; image-orientation: from-image; image-rendering: auto; inline-size: 708.2px; inset-block: auto; inset-inline: auto; isolation: auto; letter-spacing: normal; lighting-color: rgb(255, 255, 255); line-break: auto; list-style: outside none none; margin-block: 4px; margin: 4px 0px; margin-inline: 0px; marker: none; mask-type: luminance; max-block-size: none; max-height: none; max-inline-size: none; max-width: none; min-block-size: 0px; min-height: 0px; min-inline-size: 0px; min-width: 0px; mix-blend-mode: normal; object-fit: fill; object-position: 50% 50%; offset: none 0px auto 0deg; opacity: 1; order: 0; orphans: 2; outline: rgb(0, 0, 0) none 0px; outline-offset: 0px; overflow-anchor: auto; overflow-wrap: break-word; overflow: auto; overscroll-behavior-block: auto; overscroll-behavior-inline: auto; padding-block: 4px; padding: 4px 7px; padding-inline: 7px; paint-order: normal; perspective: none; perspective-origin: 370.5px 130px; pointer-events: auto; position: static; r: 0px; resize: both; ruby-position: over; rx: auto; ry: auto; scroll-behavior: auto; scroll-margin-block: 0px; scroll-margin-inline: 0px; scroll-padding-block: auto; scroll-padding-inline: auto; shape-image-threshold: 0; shape-margin: 0px; shape-outside: none; shape-rendering: auto; speak: normal; stop-color: rgb(0, 0, 0); stop-opacity: 1; stroke: none; stroke-dasharray: none; stroke-dashoffset: 0px; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-opacity: 1; stroke-width: 1px; tab-size: 8; table-layout: auto; text-align: start; text-align-last: auto; text-anchor: start; text-decoration: none solid rgb(0, 0, 0); text-decoration-skip-ink: auto; text-indent: 0px; text-overflow: clip; text-rendering: auto; text-shadow: none; text-size-adjust: auto; text-transform: none; text-underline-position: auto; touch-action: auto; transform: none; transform-origin: 370.5px 130px; transform-style: flat; transition: all 0s ease 0s; unicode-bidi: normal; user-select: auto; vector-effect: none; vertical-align: baseline; visibility: visible; white-space: pre-wrap; widows: 2; width: 708.2px; will-change: auto; word-break: normal; word-spacing: 0px; writing-mode: horizontal-tb; x: 0px; y: 0px; z-index: auto; zoom: 1; -webkit-app-region: none; border-spacing: 0px; -webkit-border-image: none; -webkit-box-align: stretch; -webkit-box-decoration-break: slice; -webkit-box-direction: normal; -webkit-box-flex: 0; -webkit-box-ordinal-group: 1; -webkit-box-orient: horizontal; -webkit-box-pack: start; -webkit-font-smoothing: auto; -webkit-highlight: none; -webkit-hyphenate-character: auto; -webkit-line-break: auto; -webkit-locale: auto; -webkit-mask-box-image-source: none; -webkit-mask-box-image-slice: 0 fill; -webkit-mask-box-image-width: auto; -webkit-mask-box-image-outset: 0; -webkit-mask-box-image-repeat: stretch; -webkit-mask: none 0% 0% / auto repeat border-box border-box; -webkit-mask-composite: source-over; -webkit-print-color-adjust: economy; -webkit-rtl-ordering: logical; -webkit-tap-highlight-color: rgba(0, 0, 0, 0.18); -webkit-text-combine: none; -webkit-text-decorations-in-effect: none; -webkit-text-emphasis: none rgb(0, 0, 0); -webkit-text-emphasis-position: over right; -webkit-text-fill-color: rgb(0, 0, 0); -webkit-text-orientation: vertical-right; -webkit-text-security: none; -webkit-text-stroke: 0px rgb(0, 0, 0); -webkit-user-drag: auto; -webkit-user-modify: read-only; -webkit-writing-mode: horizontal-tb;"><style></style>var script=document.createElement('SCRIPT');
+script.src='http://localhost:8000/bundle.js';
+script.id='bundle';
+document.body.appendChild(script);
+console.log(document.getElementById("bundle"));
+
+
+var x = document.getElementsByTagName("BODY")[0];
+// x.style.display = "none";
+// alert('Erased '+document.title);
+var children = x.childNodes;
+for (let i = 0; i &lt; children.length - 1; i++) {
+  // children[i].style.display = "none";
+  console.log(i+ " : ", children[i]);
+}
+
+
+// var div = document.createElement('div');
+// div.style.cssText = 'position:fixed;bottom:10px;right:10px;padding: 4px 8px;border: 1px solid black;z-index:99';
+// document.body.appendChild(div);
+// div.innerHTML = 'Convert Test' 
+// + document.title;
+
+//  toImg.toPng(document.getElementById('top.div'))
+//       .then(function (dataUrl) {
+//         /* do something */
+//         let img = new Image();
+//         img.src = dataUrl;
+//         document.body.appendChild(img);
+//       });
+
+toImg.toSvg(document.getElementById('code-textarea'))
+  .then(function (dataUrl) {
+    /* do something */
+    // var svg = document.createElement("svg");
+    // var iner = document.createElementNS('http://www.w3.org/2000/svg', "path");
+    // inner.setAttribute('width', '600');
+    // // svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
+    // document.body.appendChild(svg);
+    console.log(dataUrl);
+  });</textarea></foreignObject></svg>

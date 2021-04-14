@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Proof of Concept Svg</title>
+    <style>
+        body { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <script type="module">
+        import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r125/build/three.module.js';
+        import { SVGLoader } from 'https://threejs.org/examples/jsm/loaders/SVGLoader.js';
+        // Create Scene
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera( 20, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        document.body.appendChild( renderer.domElement );
+
+        // // Add box
+        // const geometry = new THREE.BoxGeometry();   
+        // const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+        // const cube = new THREE.Mesh( geometry, material );
+        // // Set position
+        // cube.position.set(0,0,0);
+        // scene.add( cube );
+
+        camera.position.z = 20;
+
+        // Image Loader
+        let loader = new SVGLoader();
+
+        loader.load(
+            // resource URL
+            'TextAreaSample.svg',
+            // called when the resource is loaded
+            function ( data ) {
+
+                const paths = data.paths;
+                const group = new THREE.Group();
+
+                for ( let i = 0; i < paths.length; i ++ ) {
+
+                    const path = paths[ i ];
+
+                    const material = new THREE.MeshBasicMaterial( {
+                        color: path.color,
+                        side: THREE.DoubleSide,
+                        depthWrite: false
+                    } );
+
+                    const shapes = SVGLoader.createShapes( path );
+
+                    for ( let j = 0; j < shapes.length; j ++ ) {
+
+                        const shape = shapes[ j ];
+                        const geometry = new THREE.ShapeGeometry( shape );
+                        const mesh = new THREE.Mesh( geometry, material );
+                        group.add( mesh );
+
+                    }
+
+                }
+
+                scene.add( group );
+
+            },
+            // called when loading is in progresses
+            function ( xhr ) {
+
+                console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+            },
+            // called when loading has errors
+            function ( error ) {
+
+                console.log( 'An error happened' );
+
+            }
+        );
+        
+
+        // Render
+        function animate() {
+        // cube.rotation.x += 0.01;
+		// cube.rotation.y += 0.01;
+
+        // plan1m.rotation.y += 0.01;
+        // plan2m.rotation.y += 0.01;
+        // plan3m.rotation.y += 0.01;
+        // plan4m.rotation.y += 0.01;
+
+        // group.rotation.y += 0.01;
+
+        requestAnimationFrame( animate );
+        renderer.render( scene, camera );
+        }
+
+        animate();
+
+        // // Load image test
+        // let img = document.createElement("img");
+        // img.src = "../testImg.png";
+        // document.body.appendChild(img);
+
+
+    </script>
+
+  </body>
