@@ -341,7 +341,7 @@ function cloneNode(nativeNode, filter, isRoot) {
             }
             return [2 /*return*/, Promise.resolve(nativeNode)
                     .then(cloneSingleNode)
-                    .then(function (clonedNode) { return cloneChildren(nativeNode, clonedNode, filter); })
+                    // .then(function (clonedNode) { return cloneChildren(nativeNode, clonedNode, filter); })
                     .then(function (clonedNode) { return decorate(nativeNode, clonedNode); })];
         });
     });
