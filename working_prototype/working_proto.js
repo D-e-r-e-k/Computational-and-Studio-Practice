@@ -1,5 +1,6 @@
 let toImgScript=document.createElement('SCRIPT');
-toImgScript.src='https://cdn.jsdelivr.net/gh/D-e-r-e-k/Computational-and-Studio-Practice/working_prototype/myThreeAndToImg.js';
+toImgScript.src='http://localhost:8000/working_prototype/myThreeAndToImg.js';
+// toImgScript.src='https://cdn.jsdelivr.net/gh/D-e-r-e-k/Computational-and-Studio-Practice/working_prototype/myThreeAndToImg.js';
 toImgScript.id='bundle';
 
 

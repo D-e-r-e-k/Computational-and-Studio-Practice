@@ -973,8 +973,8 @@ var applyStyleWithOptions_1 = require("./applyStyleWithOptions");
 var util_1 = require("./util");
 function getImageSize(domNode, options) {
     if (options === void 0) { options = {}; }
-    var width = options.width || util_1.getNodeWidth(domNode);
-    var height = options.height || util_1.getNodeHeight(domNode);
+    var width = options.width || domNode.getBoundingClientRect().width;
+    var height = options.height || domNode.offsetHeight;
     return { width: width, height: height };
 }
 function toSvg(domNode, options) {
@@ -999,7 +999,7 @@ function toCanvas(domNode, options) {
         return __generator(this, function (_a) {
             return [2 /*return*/, toSvg(domNode, options)
                     .then(util_1.createImage)
-                    .then(util_1.delay(100))
+                    .then(util_1.delay(1))
                     .then(function (image) {
                     var canvas = document.createElement('canvas');
                     var context = canvas.getContext('2d');
