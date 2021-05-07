@@ -1,5 +1,5 @@
 # Depth of Interfaces
-**A [bookmarklet]() that visualize the dom in a 3D scene.**
+**A [bookmarklet](https://d-e-r-e-k.github.io/Computational-and-Studio-Practice/) that visualize the dom in a 3D scene.**
 ## Summary
 I understand my project more as an art piece. From a utility perspective, developer consoles built into all browsers are much better for looking at the exact properties of html elements. My goal is to remind people the genius of depth illusion and the concept of layers.
 
