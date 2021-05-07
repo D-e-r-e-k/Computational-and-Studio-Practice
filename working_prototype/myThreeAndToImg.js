@@ -287,6 +287,11 @@ function cloneChildren(nativeNode, clonedNode, filter) {
                         .then(function (clonedChild) {
                         if (clonedChild) {
                             clonedNode.appendChild(clonedChild);
+							if(clonedChild.style) {
+								// console.log(clonedChild.style.visibility);
+								clonedChild.style.visibility = "hidden"; // Hide children
+							}
+							
                         }
                     });
                 }, Promise.resolve())

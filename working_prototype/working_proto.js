@@ -18,7 +18,7 @@ toImgScript.onload = function()
         x:0,
         y:0
     };
-
+    let loader = new THREE.TextureLoader();
     class part {
         constructor(node, z) {
             this.node = node;
@@ -28,7 +28,7 @@ toImgScript.onload = function()
 
         addToGroup(group) {
             // Image Loader
-            let loader = new THREE.TextureLoader();
+            
             this.group = group;
 
             // console.log(this.imgUrl);
@@ -72,7 +72,7 @@ toImgScript.onload = function()
     const camera = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, document.body.clientHeight / 2, document.body.clientHeight / - 2, 1, 4000 );
 
     const cnv = document.createElement("CANVAS");
-    cnv.setAttribute("style","position: absolute; z-index: 987; top: 0px; left: 0px");
+    cnv.setAttribute("style","position: absolute; z-index: 2147483647; top: 0px; left: 0px");
     const renderer = new THREE.WebGLRenderer({ antialias: true, canvas:cnv });
     renderer.setSize( window.innerWidth, document.body.clientHeight );
     renderer.setPixelRatio( window.devicePixelRatio );
@@ -130,7 +130,8 @@ toImgScript.onload = function()
     // Render
     function animate() {
         if(pos.x){
-        group.rotation.y = pos.x/window.innerWidth*Math.PI - Math.PI/2; 
+        group.rotation.y = pos.x/window.innerWidth*Math.PI - Math.PI/2;
+        // group.rotation.y+=0.005;
         }
         
 
