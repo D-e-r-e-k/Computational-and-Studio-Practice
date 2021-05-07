@@ -130,8 +130,8 @@ toImgScript.onload = function()
     // Render
     function animate() {
         if(pos.x){
-        group.rotation.y = pos.x/window.innerWidth*Math.PI - Math.PI/2;
-        // group.rotation.y+=0.005;
+        // group.rotation.y = pos.x/window.innerWidth*Math.PI - Math.PI/2;
+        group.rotation.y+=0.002;
         }
         
 

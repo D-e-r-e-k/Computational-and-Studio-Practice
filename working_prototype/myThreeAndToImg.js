@@ -288,7 +288,6 @@ function cloneChildren(nativeNode, clonedNode, filter) {
                         if (clonedChild) {
                             clonedNode.appendChild(clonedChild);
 							if(clonedChild.style) {
-								// console.log(clonedChild.style.visibility);
 								clonedChild.style.visibility = "hidden"; // Hide children
 							}
 							
@@ -707,7 +706,7 @@ function getCssRules(styleSheets) {
                                     });
                                 })
                                     .catch(function (e) {
-                                    console.log('Error loading remote css', e.toString());
+                                    // console.log('Error loading remote css', e.toString());
                                 }));
                             }
                         });
@@ -724,10 +723,10 @@ function getCssRules(styleSheets) {
                                 });
                             })
                                 .catch(function (e) {
-                                console.log('Error loading remote stylesheet', e.toString());
+                                // console.log('Error loading remote stylesheet', e.toString());
                             }));
                         }
-                        console.log('Error inlining remote css file', e.toString());
+                        // console.log('Error inlining remote css file', e.toString());
                     }
                 }
             });
@@ -741,7 +740,7 @@ function getCssRules(styleSheets) {
                                 });
                             }
                             catch (e) {
-                                console.log("Error while reading CSS rules from " + sheet.href, e.toString());
+                                // console.log("Error while reading CSS rules from " + sheet.href, e.toString());
                             }
                         }
                     });
@@ -799,7 +798,7 @@ function fetchCSS(url, sheet) {
             cssText: res.text(),
         };
     }, function (e) {
-        console.log('ERROR FETCHING CSS: ', e.toString());
+        // console.log('ERROR FETCHING CSS: ', e.toString());
     });
     cssFetchPromiseStore[url] = promise;
     return promise;
